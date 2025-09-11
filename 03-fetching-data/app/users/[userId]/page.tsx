@@ -13,7 +13,7 @@ type Params = {
 
 // setting meta dynamically
 export async function generateMetadata({params}:Params):Promise<Metadata>{
-  const {userId}=await params
+  const {userId}=params
   const userData:Promise<User>=getUser(userId)
   const user:User=await userData;
   return{
